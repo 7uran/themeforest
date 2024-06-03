@@ -1,0 +1,40 @@
+@import "../utils/variables";
+
+%button {
+    background-image: linear-gradient(to right, #3A52F1, #A026FD);
+    border: none;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+
+%under-line{
+    & {
+        display: inline-block;
+        position: relative;
+      
+        cursor: pointer;
+     }
+
+     &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background: $gradient-color;
+        transition: width 0.3s ease;
+     }
+
+        &:hover::after {
+        width: 100%
+     }
+}

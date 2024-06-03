@@ -1,0 +1,33 @@
+.intro-div {
+    @include container-flex(flex, center, center, column);
+    padding: 30px 20% 30px 20%;
+    color: white;
+    gap: 40px;
+ 
+    .intro-upper-div {
+       @include container-flex(flex, null, null, column);
+       gap: 20px;
+    }
+ 
+    h1 {
+       font-size: 55px;
+ 
+       span {
+          background: $gradient-color;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+       }
+    }
+ 
+    h3 {
+       font-size: larger;
+       padding: 0 10% 0 10%;
+    }
+ 
+    button {
+       @extend %button;
+       font-size: larger;
+ 
+    }
+    text-align: center;
+ }
