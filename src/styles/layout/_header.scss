@@ -1,0 +1,55 @@
+@import "../utils/mixins";
+@import "../utils/_variables.scss";
+@import "../utils/extend";
+
+body {
+   background-color: $background-color;
+   font-family: "Poppins", sans-serif;
+}
+
+
+header {
+   @include container-flex(flex, space-between, null, row);
+   width: 100%;
+   background-color: transparent;
+   height: fit-content;
+   padding: 30px 5% 30px 5%;
+
+   .header-left-side {
+      @include container-flex(flex, null, center, row);
+      gap: 50px;
+
+      ul {
+         color: white;
+         list-style: none;
+         @include container-flex(flex);
+         gap: 20px;
+
+         li {
+            @extend %under-line;
+         }
+      }
+   }
+
+}
+
+.header-right-side {
+   @include container-flex(flex, null, center);
+   gap: 25px;
+   color: white;
+
+   i:hover {
+      color: rgb(49, 49, 255);
+   }
+
+   a {
+      @extend %under-line;
+   }
+
+   .member-btn {
+      @extend %button;
+   }
+}
+
+
+

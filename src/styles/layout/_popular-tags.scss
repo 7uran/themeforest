@@ -1,0 +1,41 @@
+.tags-div {
+    color: white;
+    @include container-flex(flex, center, center, column);
+    flex-grow: 1;
+    padding: 30px 5% 30px 5%;
+    gap: 50px;
+    .tag-container{
+        @include container-flex(flex, center, null, row);
+        gap: 30px;
+    }
+
+
+
+    .tag {
+        border-radius: 100px;
+        background-color: $div-background;
+        @include container-flex(flex, space-between, center, null);
+        gap: 10px;
+        height: 100px;
+        padding: 40px;
+        width: 200px;
+
+    }
+
+
+
+    .tag-right {
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+    }
+
+    .tag-left{
+        p{
+            color: white;
+        }
+    }
+}
